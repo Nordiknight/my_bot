@@ -44,8 +44,8 @@
                 </clip>
             </camera>
             <plugin name="camera_controller" filename="libgazebo_ros_camera.so">
-                <ros>
-                    <!-- <namespace>camera</namespace> -->
+                <!-- <ros>
+                    <namespace>camera</namespace>
                         <qos>
                             <topic name="/camera/image_raw">
                                 <publisher>
@@ -53,7 +53,7 @@
                                 </publisher>
                             </topic>
                         </qos>
-                </ros>
+                </ros> -->
                 <frame_name>camera_link_optical</frame_name>
             </plugin>
         </sensor>
