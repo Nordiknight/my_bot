@@ -37,6 +37,17 @@ def generate_launch_description():
                                    '-entity', 'my_bot'],
                         output='screen')
 
+    diff_drive_spawner = Node(
+        package="controller_manager",
+        executable="spawner.py",
+        arguments=["diff_cont"],
+    )
+
+    joint_broad_spawner = Node(
+        package="controller_manager",
+        executable="spawner.py",
+        arguments=["joint_broad"],
+    )
 
 
 
@@ -44,5 +55,7 @@ def generate_launch_description():
     return LaunchDescription([
         rsp,
         gazebo,
-        spawn_entity
+        spawn_entity,
+        diff_drive_spawner,
+        joint_broad_spawner
     ])
